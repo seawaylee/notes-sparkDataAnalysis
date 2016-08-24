@@ -1,0 +1,137 @@
+[TerminalIPythonApp] WARNING | Subcommand `ipython notebook` is deprecated and will be removed in future versions.
+[TerminalIPythonApp] WARNING | You likely want to use `jupyter notebook`... continue in 5 sec. Press Ctrl-C to quit now.
+[W 18:46:06.906 NotebookApp] Unrecognized alias: '--profile=spark', it will probably have no effect.
+[I 18:46:06.984 NotebookApp] Serving notebooks from local directory: /Users/lixiwei-mac/Documents/python/notes-sparkDataAnalysis
+[I 18:46:06.984 NotebookApp] 0 active kernels 
+[I 18:46:06.984 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/
+[I 18:46:06.985 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 18:46:19.621 NotebookApp] Kernel started: 4169309e-8faa-469e-bdf9-6d79222f0527
+16/08/16 18:46:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/08/16 18:47:13 ERROR Executor: Exception in task 0.0 in stage 0.0 (TID 0)
+org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/worker.py", line 111, in main
+    process()
+  File "/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/worker.py", line 106, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/serializers.py", line 263, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "<ipython-input-3-457b96eb081b>", line 3, in <lambda>
+NameError: name 'json' is not defined
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:306)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:270)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+16/08/16 18:47:13 WARN TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0, localhost): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/worker.py", line 111, in main
+    process()
+  File "/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/worker.py", line 106, in process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/serializers.py", line 263, in dump_stream
+    vs = list(itertools.islice(iterator, batch))
+  File "<ipython-input-3-457b96eb081b>", line 3, in <lambda>
+NameError: name 'json' is not defined
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:306)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:270)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+16/08/16 18:47:13 ERROR TaskSetManager: Task 0 in stage 0.0 failed 1 times; aborting job
+[I 18:47:43.227 NotebookApp] Kernel shutdown: 4169309e-8faa-469e-bdf9-6d79222f0527
+[I 20:09:00.552 NotebookApp] Kernel started: 801a509b-45a1-42e0-af1d-cf5bac3963a6
+16/08/16 20:09:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[I 20:10:00.266 NotebookApp] Kernel shutdown: 801a509b-45a1-42e0-af1d-cf5bac3963a6
+[E 20:10:34.321 NotebookApp] Exception restarting kernel
+    Traceback (most recent call last):
+      File "/Users/lixiwei-mac/anaconda/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 88, in post
+        yield gen.maybe_future(km.restart_kernel(kernel_id))
+      File "/Users/lixiwei-mac/anaconda/lib/python3.5/site-packages/notebook/services/kernels/kernelmanager.py", line 109, in restart_kernel
+        self._check_kernel_id(kernel_id)
+      File "/Users/lixiwei-mac/anaconda/lib/python3.5/site-packages/notebook/services/kernels/kernelmanager.py", line 169, in _check_kernel_id
+        raise web.HTTPError(404, u'Kernel does not exist: %s' % kernel_id)
+    tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 801a509b-45a1-42e0-af1d-cf5bac3963a6)
+[E 20:10:34.325 NotebookApp] {
+      "Accept-Language": "zh-CN,zh;q=0.8,en;q=0.6",
+      "Connection": "keep-alive",
+      "Content-Length": "0",
+      "Referer": "http://localhost:8888/notebooks/1.WordCount.ipynb",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "Host": "localhost:8888",
+      "Origin": "http://localhost:8888",
+      "X-Requested-With": "XMLHttpRequest"
+    }
+[E 20:10:34.325 NotebookApp] 500 POST /api/kernels/801a509b-45a1-42e0-af1d-cf5bac3963a6/restart (::1) 4.46ms referer=http://localhost:8888/notebooks/1.WordCount.ipynb
+[W 20:10:34.355 NotebookApp] Session not found: session_id='34e0c43a-500d-401b-84ec-ea8c9f516ba4'
+[W 20:10:34.356 NotebookApp] 404 DELETE /api/sessions/34e0c43a-500d-401b-84ec-ea8c9f516ba4 (::1) 1.54ms referer=http://localhost:8888/notebooks/1.WordCount.ipynb
+[W 20:10:36.022 NotebookApp] Session not found: session_id='34e0c43a-500d-401b-84ec-ea8c9f516ba4'
+[W 20:10:36.023 NotebookApp] 404 DELETE /api/sessions/34e0c43a-500d-401b-84ec-ea8c9f516ba4 (::1) 1.21ms referer=http://localhost:8888/notebooks/1.WordCount.ipynb
+[I 20:10:36.055 NotebookApp] Kernel started: a9e2c351-155f-4649-8cad-afbb482e56fd
+16/08/16 20:10:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[I 20:11:00.769 NotebookApp] Saving file at /1.WordCount.ipynb
+/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/shuffle.py:58: UserWarning: Please install psutil to have better support with spilling
+[I 20:13:00.546 NotebookApp] Saving file at /1.WordCount.ipynb
+16/08/16 22:35:39 WARN HeartbeatReceiver: Removing executor driver with no recent heartbeats: 948365 ms exceeds timeout 120000 ms
+16/08/16 22:35:39 ERROR TaskSchedulerImpl: Lost executor driver on localhost: Executor heartbeat timed out after 948365 ms
+16/08/16 22:35:39 WARN SparkContext: Killing executors is only supported in coarse-grained mode
+[I 13:56:07.878 NotebookApp] Kernel started: d6e6bc30-f15f-46e5-b19c-d5db3c933808
+16/08/17 13:56:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/08/17 13:56:16 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[Stage 0:>                                                          (0 + 0) / 2]16/08/17 13:56:43 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+[Stage 0:>                                                          (0 + 2) / 2]16/08/17 13:57:06 WARN TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1, hadoop02): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/root/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/worker.py", line 64, in main
+    ("%d.%d" % sys.version_info[:2], version))
+Exception: Python in worker has different version 2.6 than that in driver 3.5, PySpark cannot run with different minor versions
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:306)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:270)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+16/08/17 13:57:16 WARN TaskSetManager: Lost task 1.1 in stage 0.0 (TID 3, hadoop04): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/root/app/spark-1.6.0-bin-hadoop2.6/python/lib/pyspark.zip/pyspark/worker.py", line 64, in main
+    ("%d.%d" % sys.version_info[:2], version))
+Exception: Python in worker has different version 2.6 than that in driver 3.5, PySpark cannot run with different minor versions
+
+	at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)
+	at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)
+	at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)
+	at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:306)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:270)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+16/08/17 13:57:17 ERROR TaskSetManager: Task 1 in stage 0.0 failed 4 times; aborting job
+16/08/17 13:57:18 WARN TaskSetManager: Lost task 0.2 in stage 0.0 (TID 4, hadoop05): TaskKilled (killed intentionally)
+[I 13:58:07.944 NotebookApp] Saving file at /ClusterTest.ipynb

@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Aug 22 09:39:43 CST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0156-afe7-3f7f-0000e9781400 
+on database directory /Users/lixiwei-mac/Documents/python/notes-sparkDataAnalysis/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@3ca31a0b 
+Loaded from file:/Users/lixiwei-mac/app/spark-1.6.0-bin-hadoop2.6/lib/spark-assembly-1.6.0-hadoop2.6.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_71-b14
+user.dir=/Users/lixiwei-mac/Documents/python/notes-sparkDataAnalysis
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

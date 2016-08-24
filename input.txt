@@ -1,0 +1,12 @@
+INFO This is a info log 1
+INFO Log 2
+
+ERROR OMG,This is an error!!
+WARN Don't worry , just a warn....
+
+
+
+
+ERROR Another error.
+WARN warn again
+INFO get an info.
